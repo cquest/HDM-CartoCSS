@@ -96,7 +96,7 @@
   [type='wetland']       {
     [zoom<14] {
       polygon-fill: @wetland;
-    } 
+    }
     [zoom>=14] {
       polygon-pattern-file:url('icons/pattern/marsh-36.png');
     }
@@ -188,6 +188,13 @@
     [zoom>=16] {raster-opacity: 0.25;}
 }
 
+#hillshade2 [zoom>=9]{
+    raster-scaling: bilinear;
+    raster-comp-op: multiply;
+    raster-opacity: 0.15;
+    image-filters: agg-stack-blur(5,5);
+}
+
 #contour_line[zoom>=12]{
   line-width: 0.2;
   line-color: @contour_line;
@@ -250,8 +257,8 @@ Map {
         line-width: 0.8;
         line-dasharray: 12,6;
       }
-    }    
-   
+    }
+
   [zoom=8] { line-width: 0.1; }
   [zoom=9] { line-width: 0.2; }
   [zoom=10]{ line-width: 0.4; }
@@ -277,7 +284,7 @@ Map {
         line-width: 1.5;
         line-dasharray: 16,6;
       }
-    }    
+    }
     [zoom=13]{ line-width: 1; }
     [zoom=14]{ line-width: 1.5; }
   }
@@ -289,12 +296,12 @@ Map {
         line-width: 0.4;
         line-dasharray: 8,4;
       }
-    }    
+    }
     [zoom=13]{ line-width: 0.2; }
     [zoom=14]{ line-width: 0.4; }
   }
 }
-  
+
 #waterway_high[zoom>=15] {
   line-color: @water;
   line-cap: round;
@@ -323,7 +330,7 @@ Map {
         line-width: 12;
         line-dasharray: 66,20;
         }
-     }   
+     }
     [zoom=15]{ line-width: 6; }
     [zoom=16]{ line-width: 7; }
     [zoom=17]{ line-width: 8; }
@@ -339,7 +346,7 @@ Map {
           line-dasharray: 24,7;
         }
         [zoom=16] {
-          line-width: 0.8;     
+          line-width: 0.8;
           line-dasharray: 28,8;
         }
         [zoom=17] {
@@ -354,7 +361,7 @@ Map {
           line-width: 2;
           line-dasharray: 66,20;
         }
-      } 
+      }
       [zoom=15]{ line-width: 0.6; }
       [zoom=16]{ line-width: 0.8; }
       [zoom=17]{ line-width: 1; }
