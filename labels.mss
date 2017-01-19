@@ -573,10 +573,10 @@
   text-fill: @admin_2_text;
   text-size: 10;
   text-placement: line;
-  text-dy: -7;
+  text-dy: -5;
   text-face-name: @sans_lt_italic;
   text-halo-radius: 2;
-  text-halo-fill: @place_halo;
+  text-halo-fill: fadeout(@place_halo,30%);
   text-min-padding: 50;
   text-min-distance: 50;
   text-spacing: 300;

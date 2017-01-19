@@ -393,22 +393,22 @@ Map {
 #admin-high[zoom>=13] {
   [admin_level=2] {
     outline/line-color: lighten(@admin_2, 25%);
-    outline/line-width: 2;
+    outline/line-width: 3;
     [zoom>=8] {
-      outline/line-width: 3;
+      outline/line-width: 4;
     }
   }
   eraser/line-color: white;
-  eraser/line-width: 1;
+  eraser/line-width: 3;
   eraser/comp-op: darken;
   line-color: @admin_2;
-  line-width: 1;
+  line-width: 2;
   [admin_level>2] {
     line-dasharray: 10,5;
     line-color: @admin_3;
     [admin_level>=6] {
       line-dasharray: 5,5;
-      line-width: 0.8;
+      line-width: 1.5;
     }
   }
 }
