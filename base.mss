@@ -180,19 +180,20 @@
     raster-comp-op: multiply;
     raster-opacity: 0.85;
 
-    [zoom>=5]  {raster-opacity: 0.65;}
-    [zoom>=7]  {raster-opacity: 0.55;}
-    [zoom>=9]  {raster-opacity: 0.45;}
-    [zoom>=10] {raster-opacity: 0.40;}
-    [zoom>=14] {raster-opacity: 0.30;}
-    [zoom>=16] {raster-opacity: 0.25;}
+    [zoom>=5]  {raster-opacity: 0.75;}
+    [zoom>=7]  {raster-opacity: 0.60;}
+    [zoom>=9]  {raster-opacity: 0.30;}
+    [zoom>=10] {raster-opacity: 0.25;}
+    [zoom>=14] {raster-opacity: 0.15;image-filters: agg-stack-blur(5,5);}
+    [zoom>=16] {raster-opacity: 0.05;image-filters: agg-stack-blur(10,10);}
 }
 
 #hillshade2 [zoom>=9]{
     raster-scaling: bilinear;
     raster-comp-op: multiply;
     raster-opacity: 0.15;
-    image-filters: agg-stack-blur(5,5);
+    [zoom>=14] {raster-opacity: 0.10;image-filters: agg-stack-blur(5,5);}
+    [zoom>=16] {raster-opacity: 0.05;image-filters: agg-stack-blur(10,10);}
 }
 
 #contour_line[zoom>=12]{
